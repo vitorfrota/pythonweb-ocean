@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {%block content%}
+<h1>Meus Posts</h1>
+<ul>
+  {%for post in posts%}
+  <li>
+    <h2>{{post.title}}</h2>
+    <p>{{post.body}}</p>
+    <span>{{post.created.strftime('%d-%m-%Y')}} - {{post.author}}</span>
+  </li>
+  {%endfor%}
+</ul>
+{%endblock%}
